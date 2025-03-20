@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "noErrorTruncation": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": false,
+    "noImplicitAny": false, // 암시적 any 타입 허용
+    "strictNullChecks": false, // null 체크 비활성화
+    "strictFunctionTypes": false, // 함수 타입 체크 비활성화
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Custom */
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false, // default: true => 해당 템플릿 다량 오류
+    "noUnusedParameters": false, // default: true => 해당 템플릿 다량 오류
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/app": ["./app"],
+      "@/app/*": ["./app/*"],
+      "@/assets": ["./assets"],
+      "@/assets/*": ["./assets/*"],
+      "@/entities": ["./entities"],
+      "@/entities/*": ["./entities/*"],
+      "@/features": ["./features"],
+      "@/features/*": ["./features/*"],
+      "@/pages": ["./pages"],
+      "@/pages/*": ["./pages/*"],
+      "@/shared": ["./shared"],
+      "@/shared/*": ["./shared/*"],
+      "@/widgets": ["./widgets"],
+      "@/widgets/*": ["./widgets/*"],
+      
+      "*": ["../@mf-types/*"],
+      "@/export": ["./export"],
+      "@/export/*": ["./export/*"]
+    }
+  },
+  "include": [
+    "src", 
+    "src/**/*",
+    "mfe-config" 
+  ],
+  "references": [{ "path": "./tsconfig.node.json"}]
+}
